@@ -1,0 +1,63 @@
+	<div class="panel panel-default">
+			
+			<div class="panel-heading">
+				<%= number_to_currency(@room.price, unit: "£") %>
+
+				<div class="pull-right">
+					Per Night
+				</div><!-- /.pull-right -->
+
+				<div class="clear"></div><!-- /.clear -->
+
+			</div><!-- /.panel-heading -->
+
+			<div class="panel-body">
+				
+				<div class="row">
+					
+					<div class="col-md-4">
+						
+						<div class="input-group">
+
+						<label for="checkIn">Check In</label>
+						<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+						
+						
+						</div><!-- /input-group -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+						
+						<div class="input-group">
+
+						<label for="checkIn">Check Out</label>
+						<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+						
+						
+						</div><!-- /input-group -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+						
+						<div class="form-group">
+						  <label for="sel1">Guests</label>
+						  <select class="form-control" id="sel1">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						    <option>5</option>
+						    <option>6</option>
+						    <option>7</option>
+						    <option>8</option>
+						    <option>9</option>
+						    <option>10</option>
+						  </select>
+						</div>
+					</div><!-- /.col-md-4 -->
+
+				</div><!-- /.row -->
+
+			</div><!-- /.panel-body -->
+
+		</div><!-- /.panel panel-default -->

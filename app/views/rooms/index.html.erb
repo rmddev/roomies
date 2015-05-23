@@ -1,0 +1,20 @@
+<h1>Latest Rooms Listed</h1>
+
+<% @rooms.each do |room| %>
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			
+			<div class="panel-heading">
+				<p><%= link_to room.name, room  %></p>
+			</div><!-- /.panel-heading -->
+			
+			<div class="panel-body">
+			<%= image_tag room.image.url, class: "img-responsive" %>
+			<p>Bedrooms: <%= pluralize(room.bed, "bed") %></p>
+			<p>Price: <%= number_to_currency(room.price) %></p>
+			</div><!-- /.panel-body -->
+	
+		</div><!-- /.panel panel-default -->
+
+	</div><!-- /.col-md-4 -->
+<% end %>

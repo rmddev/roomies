@@ -1,0 +1,38 @@
+<div class="main-image">
+	<%= image_tag @room.image.url(:slider) %>
+</div><!-- /.main-image -->
+
+<div class="quick-details col-md-12">
+	
+	<div class="col-md-2">
+		<img src="http://www.placehold.it/100x100" alt="" />
+		User Name
+	</div><!-- /.col-md-3 -->
+
+	<div class="col-md-5">
+		<h3><%= @room.name %></h3>
+		<p>Location: location Name, United Kingdom</p>
+
+		<div class="rental-icons">
+	
+			<i class="fa fa-home"> House Type</i>
+
+			<i class="fa fa-users"> 3 People</i>
+
+			<i class="fa fa-key"> 3 Bedrooms</i>
+
+			<i class="fa fa-bed"><%= pluralize(@room.bed, "Bed") %></i>
+
+		</div><!--/rental icons-->
+
+
+	</div><!-- /.col-md-6 -->
+
+
+	<div class="col-md-5">
+		
+		<%= render "bookingform" %>
+
+	</div><!-- /.col-md-6 -->
+
+</div><!-- /.col-md-12 quick details-->

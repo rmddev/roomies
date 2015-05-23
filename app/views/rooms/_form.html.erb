@@ -1,0 +1,12 @@
+<div class="col-md-6">
+	<%= simple_form_for @room do |f| %>
+
+	<%= f.input :image, input_html: {class: "form-control"} %>
+	<%= f.input :bed, label: "Single or Double Bed", input_html: {class: "form-control"} %>
+	<%= f.input :price, label: "Price Per Month", input_html: {class: "form-control"} %>
+	<%= f.input :length, label: "How many months?", input_html: {class: "form-control"} %>
+
+	<%= f.submit :submit, class: "btn btn-primary" %>
+
+	<% end %>
+</div><!-- /.col-md-6 -->
