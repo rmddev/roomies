@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522063248) do
+ActiveRecord::Schema.define(version: 20150523185637) do
 
   create_table "rooms", force: :cascade do |t|
     t.integer  "bed"
@@ -25,6 +25,20 @@ ActiveRecord::Schema.define(version: 20150522063248) do
     t.datetime "image_updated_at"
     t.text     "name"
     t.text     "description"
+    t.string   "room_type"
+    t.string   "location"
+    t.string   "country"
+    t.integer  "accomodates"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.time     "checkin"
+    t.time     "checkout"
+    t.float    "extra_people"
+    t.float    "cleaning_fee"
+    t.float    "deposit"
+    t.float    "week_price"
+    t.text     "cancelation"
+    t.text     "house_rules"
   end
 
 end

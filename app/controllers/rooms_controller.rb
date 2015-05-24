@@ -37,6 +37,8 @@ class RoomsController < ApplicationController
 	def destroy
 	end
 
+	
+
 	private
 
 	def find_room
@@ -44,7 +46,7 @@ class RoomsController < ApplicationController
 	end
 
 	def room_params
-		params.require(:room).permit(:image, :bed, :price, :length)
+		params.require(:room).permit(:image, :name, :description, :bed, :price, :length, :room_type, :location, :country, :accomodates, :bedrooms, :bathrooms, :checkin, :checkout, :extra_people, :cleaning_fee, :deposit, :week_price, :cancelation, :house_rules)
 	end
 
 end

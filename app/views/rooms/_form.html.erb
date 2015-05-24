@@ -1,12 +1,70 @@
-<div class="col-md-6">
-	<%= simple_form_for @room do |f| %>
+<%= simple_form_for @room do |f| %>
 
-	<%= f.input :image, input_html: {class: "form-control"} %>
-	<%= f.input :bed, label: "Single or Double Bed", input_html: {class: "form-control"} %>
-	<%= f.input :price, label: "Price Per Month", input_html: {class: "form-control"} %>
-	<%= f.input :length, label: "How many months?", input_html: {class: "form-control"} %>
+<div class="col-md-6">
+	
+	<h3>About the Room</h3>
+	
+	<%= f.input :name, input_html: {class: "form-control"} %>
+
+	<%= f.input :image, input_html: {class: "form-control"}, label: "Display Image" %>
+
+	<%= f.input :room_type, input_html: {class: "form-control"}, label: "Property Type" %>
+
+	<%= f.input :bedrooms, input_html: {class: "form-control", label: "Bedrooms"} %>
+
+	<%= f.input :bed, label: "Beds", input_html: {class: "form-control"} %>
+
+	<%= f.input :bathrooms, input_html: {class: "form-control"} %>
+
+	<%= f.input :price, label: "Price Per Night", input_html: {class: "form-control"} %>
+
+	<%= f.input :accomodates, label: "People per room", input_html: {class: "form-control"} %>
+
+
+	
+
+	
+</div><!-- /.col-md-6 -->
+
+<div class="col-md-6">
+
+	<h3>Checkin and Out</h3>
+
+	<%= f.input :checkin, label: "Checkin time", input_html: {class: "form-control"} %>
+
+	<%= f.input :checkout, label: "Checkout time", input_html: {class: "form-control"} %>
+
+	<h3>Location</h3>
+
+	<%= f.input :location, input_html: {class: "form-control"} %>
+
+	<%= f.input :country, input_html: {class: "form-control"} %>
+	
+	<h3>Room Fees</h3>
+
+	<%= f.input :extra_people, label: "extra people fees", input_html: {class: "form-control"} %>
+
+	<%= f.input :cleaning_fee, label: "Cleaning fee", input_html: {class: "form-control"} %>
+	
+	<%= f.input :deposit, label: "Security deposit", input_html: {class: "form-control"} %>
+
+	<%= f.input :week_price, label: "Weekly rental price", input_html: {class: "form-control"} %>
+
+	<%= f.input :cancelation, label: "Cancellation Strictness", input_html: {class: "form-control"} %>
+
+
+
+</div><!-- /.col-md-6 -->
+
+<div class="col-md-12">
+	<h3>Describe the room</h3>
+
+	<%= f.input :description, label: "Describe the room/area", input_html: {class: "form-control"} %>
+
+	<%= f.input :house_rules, label: "House Rules", input_html: {class: "form-control"} %>
+
 
 	<%= f.submit :submit, class: "btn btn-primary" %>
+</div><!-- /.col-md-12 -->
 
-	<% end %>
-</div><!-- /.col-md-6 -->
+<% end %>

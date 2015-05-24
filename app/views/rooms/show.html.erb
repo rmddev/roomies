@@ -1,25 +1,25 @@
 <div class="main-image">
-	<%= image_tag @room.image.url(:slider) %>
+	<%= image_tag @room.image.url(:slider), class: "img-responsive" %>
 </div><!-- /.main-image -->
 
 <div class="quick-details col-md-12">
 	
 	<div class="col-md-2">
-		<img src="http://www.placehold.it/100x100" alt="" />
+		<img src="http://www.placehold.it/100x100" alt="" class="img-responsive img-circle" />
 		User Name
 	</div><!-- /.col-md-3 -->
 
 	<div class="col-md-5">
 		<h3><%= @room.name %></h3>
-		<p>Location: location Name, United Kingdom</p>
+		<p>Location: <%= @room.location %> Country: <%= @room.country %></p>
 
 		<div class="rental-icons">
 	
-			<i class="fa fa-home"> House Type</i>
+			<i class="fa fa-home"> <%= @room.room_type %></i>
 
-			<i class="fa fa-users"> 3 People</i>
+			<i class="fa fa-users"> <%= pluralize(@room.accomodates, "Guest") %></i>
 
-			<i class="fa fa-key"> 3 Bedrooms</i>
+			<i class="fa fa-key"> <%= pluralize(@room.bedrooms, "Bedroom") %></i>
 
 			<i class="fa fa-bed"><%= pluralize(@room.bed, "Bed") %></i>
 
@@ -30,9 +30,19 @@
 
 
 	<div class="col-md-5">
+
+		<!--user form to check availability -->
 		
 		<%= render "bookingform" %>
 
 	</div><!-- /.col-md-6 -->
 
 </div><!-- /.col-md-12 quick details-->
+
+<div class="row">
+
+	<!-- shows the properties details -->
+
+	<%= render "showdetails" %>	
+
+</div><!-- /.row -->
